@@ -15,7 +15,7 @@ const Notifications = () => {
         </Tooltip>
     );
     return (
-        <>
+        <div className="d-flex align-items-center">
             <div className={styles.icon_circle}>
                 <FaBell color='#767676' size="25px" />
             </div>
@@ -41,7 +41,7 @@ const Notifications = () => {
                     </NavDropdown.Item>
                 </NavDropdown>
             </OverlayTrigger>
-        </>
+        </div>
     )
 }
 

@@ -7,7 +7,7 @@ import Search from './Search';
 const Header = () => {
     return (
         <div className={styles.header_main}>
-            <div className='d-flex align-items-center w-100'>
+            <div className='d-flex align-items-center justify-content-between w-100'>
                 <Menu />
                 <Search />
                 <Notifications />
