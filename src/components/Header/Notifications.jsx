@@ -27,7 +27,6 @@ const Notifications = () => {
             </div>
             <OverlayTrigger
                 placement="bottom"
-                delay={{ show: 250, hide: 400 }}
                 overlay={renderTooltip}
             >
                 <NavDropdown title="" id="basic-nav-dropdown">

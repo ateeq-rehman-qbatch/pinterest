@@ -3,10 +3,14 @@
 
 .header_main {
     height: 80px;
+    background-color: #fff;
     box-shadow: rgb(0 0 0 / 10%) 0px 8px 8px -8px;
     transition: box-shadow 300ms ease-in-out 0s;
     padding: 0 20px;
     @include display-flex(center, space-between, row);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .menu_main{
@@ -16,9 +20,7 @@
     }
 
     button {
-        border-radius: 25px;
-        padding: 10px 15px;
-        font-weight: bold;
+        @include buttons(#000, #000);
     }
 }
 .dropdown_item{

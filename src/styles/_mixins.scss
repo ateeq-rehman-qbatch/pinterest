@@ -5,22 +5,22 @@
     flex-direction: $direction;
   }
   
-  @mixin background {
-    background-color: #fff;
-    padding: 30px;
-    width: 100%;
-    border-radius: 2px;
-  }
-  
-  @mixin buttons($bg, $padding, $hoverBg) {
+  @mixin buttons($bg, $hoverBg) {
+    border-radius: 25px;
+    padding: 12px 15px;
+    font-weight: bold;
     background-color: $bg;
-    color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: $padding;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: $hoverBg;
+    }
+  }
+  @mixin background($width,$height, $radius, $bgColor, $hoverBg) {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    background-color: $bgColor;
   
     &:hover {
       background-color: $hoverBg;
