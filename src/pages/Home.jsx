@@ -1,13 +1,12 @@
-import React from 'react';
-import HomeCards from '../components/homeData/homeCards';
-import styles from "../styles/home.module.scss";
+import React from "react";
+import HomeCards from "../components/homeData/homeCards";
 
 const Home = () => {
-    return (
-        <div className={styles.home_main}>
-            <HomeCards />
-        </div>
-    )
-}
+  return (
+    <div>
+      <HomeCards />
+    </div>
+  );
+};
 
 export default Home;

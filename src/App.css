@@ -5,3 +5,8 @@
   padding: 10px;
   z-index: 1 !important;
 }
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

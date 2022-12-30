@@ -1,87 +1,116 @@
 @import "mixins";
 @import "variables";
 
-.home_main {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 252px);
-    grid-auto-rows: 10px;
-    justify-content: center;
+.my_masonry_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 252px);
+  justify-content: center;
+  width: 100%;
 }
-
 .cards_main {
-    position: relative;
-    cursor: zoom-in;
-    margin: 16px 8px;
+  width: 252px;
+  cursor: zoom-in;
+  margin: 16px 0;
+  padding: 0 8px 8px 8px;
 
-    img {
-        width: 100%;
-        border-radius: 20px;
-        object-fit: cover;
-        object-position: 20% 50%;
-    }
+  img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: 20% 50%;
+  }
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    @include background(100%, 100%, 20px, none, none);
-    color: #fff;
-    display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include background(100%, 100%, 20px, none, none);
+  color: #fff;
+  display: none;
 }
 
 .cards_main:hover .overlay {
-    display: block;
-    background: rgba(0, 0, 0, .3);
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .category_details {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 89%;
-    @include display-flex(center, space-between, row);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 89%;
+  @include display-flex(center, space-between, row);
 
-    button {
-        @include buttons($primary-color, $primary-hover-color);
-    }
+  button {
+    @include buttons($primary-color, $primary-hover-color);
+  }
 }
 
 .download_icons {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    @include display-flex(center, none, row);
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  @include display-flex(center, none, row);
 
-    div {
-        @include background(32px, 32px, 50%, rgb(232, 232, 232), rgb(241, 241, 241));
-        color: #000;
-        font-size: 18px;
-        cursor: pointer;
-        margin-left: 10px;
-        @include display-flex(center, center, row);
-    }
+  div {
+    @include background(
+      32px,
+      32px,
+      50%,
+      rgb(232, 232, 232),
+      rgb(241, 241, 241)
+    );
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    @include display-flex(center, center, row);
+  }
 }
 
 .pin_link {
-    @include background(110px, 32px, 20px, rgb(232, 232, 232), rgb(241, 241, 241));
-    color: #000;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    padding: 4px 8px;
-    display: flex;
-    align-items: center;
+  @include background(
+    110px,
+    32px,
+    20px,
+    rgb(232, 232, 232),
+    rgb(241, 241, 241)
+  );
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
 
-    p {
-        height: 32px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-bottom: 0;
-        margin-top: 8px;
-    }
+  p {
+    height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+}
+.pin_title {
+  margin-left: 12px;
+  margin-top: 5px;
+  p {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    max-width: 100%;
+  }
+  p:first-child {
+    font-weight: 600;
+  }
+  p:nth-child(2) {
+    margin-left: 8px;
+  }
 }
