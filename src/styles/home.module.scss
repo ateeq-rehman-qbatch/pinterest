@@ -41,7 +41,7 @@
   left: 15px;
   width: 89%;
   @include display-flex(center, space-between, row);
-
+  z-index: 1;
   button {
     @include buttons($primary-color, $primary-hover-color);
   }
@@ -53,7 +53,7 @@
   right: 15px;
   @include display-flex(center, none, row);
 
-  div {
+  .icon_circle {
     @include background(
       32px,
       32px,
@@ -68,7 +68,10 @@
     @include display-flex(center, center, row);
   }
 }
-
+.dropdown_item {
+  padding: 7px 10px !important;
+  border-radius: 8px;
+}
 .pin_link {
   @include background(
     110px,
@@ -113,4 +116,11 @@
   p:nth-child(2) {
     margin-left: 8px;
   }
+}
+.pin_profile{
+    cursor: pointer;
+
+    &:hover{
+        text-decoration: underline;
+    }
 }

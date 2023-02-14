@@ -1,0 +1,79 @@
+.dropdown-menu.show {
+    border: none;
+    box-shadow: 0 0 5px rgb(234, 234, 234);
+    border-radius: 12px;
+    padding: 10px;
+    z-index: 1 !important;
+  }
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+  .dropdown-toggle::before{
+    display: none !important;
+  }
+  .loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  .dropdown_item {
+    padding: 7px 10px !important;
+    border-radius: 8px;
+  }
+  .loadingSpinnerContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loadingSpinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #000 transparent #555 transparent;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+  }
+  .cover-modal{
+    max-width: 62vw !important;
+    overflow: auto;
+  }
+  .reactEasyCrop_Container{
+    margin-top: 90px;
+    margin-bottom: 75px;
+  }
+  .form-input label{
+    margin-bottom: 5px;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .form-input input{
+    width: 100%;
+    height: 48px;
+    border-radius: 16px;
+    border-color: #cdcdcd;
+    border-width: 2px;
+  }
+  .form-input input:focus{
+    box-shadow: none;
+  }
+  .form-input textarea{
+    width: 100%;
+    border-radius: 16px;
+    border-color: #cdcdcd;
+    border-width: 2px;
+  }
+  .form-input textarea:focus{
+    box-shadow: none;
+  }

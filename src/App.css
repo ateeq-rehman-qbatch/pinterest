@@ -1,12 +1,1 @@
-.dropdown-menu.show {
-  border: none;
-  box-shadow: 0 0 5px rgb(234, 234, 234);
-  border-radius: 12px;
-  padding: 10px;
-  z-index: 1 !important;
-}
-.loader{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import "./styles/styles.css";

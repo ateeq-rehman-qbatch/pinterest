@@ -2,65 +2,112 @@
 @import "variables";
 
 .header_main {
-    height: 80px;
-    background-color: #fff;
-    box-shadow: rgb(0 0 0 / 10%) 0px 8px 8px -8px;
-    transition: box-shadow 300ms ease-in-out 0s;
-    padding: 0 20px;
-    @include display-flex(center, space-between, row);
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 10%) 0px 8px 8px -8px;
+  transition: box-shadow 300ms ease-in-out 0s;
+  padding: 0 20px;
+  @include display-flex(center, space-between, row);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.menu_main{
-    img {
-        width: 25px;
-        height: 25px;
-    }
+.menu_main {
+  img {
+    width: 25px;
+    height: 25px;
+  }
 
-    button {
-        @include buttons(#000, #000);
-    }
+  button {
+    @include buttons(#000, #000);
+  }
 }
-.dropdown_item{
-    padding: 10px !important;
-    border-radius: 8px;
+.dropdown_item {
+  padding: 7px 10px !important;
+  border-radius: 8px;
 }
 
 .header_search {
-    width: 70%;
-    height: 50px;
-    border-radius: 25px;
-    background-color: rgb(236, 236, 236);
-    padding: 0 15px;
-    margin-right: 10px;
-    @include display-flex(center, none, row);
+  width: 70%;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgb(236, 236, 236);
+  padding: 0 15px;
+  margin-right: 10px;
+  @include display-flex(center, none, row);
 
-    input {
-        width: 100%;
-        margin-left: 10px;
-        background-color: transparent;
-        height: 40px;
-        border: none;
+  input {
+    width: 100%;
+    margin-left: 10px;
+    background-color: transparent;
+    height: 40px;
+    border: none;
 
-        &:focus {
-            outline: none;
-        }
+    &:focus {
+      outline: none;
     }
+  }
 }
-.icon_circle{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    @include display-flex(center, center, row);
+.icon_circle {
+  @include icon_circle(50px, 50px);
+}
+.profile_tooltip {
+  width: 100px;
+  font-size: 12px;
+}
+.login_btn {
+  button:nth-child(1) {
+    @include buttons($primary-color, $primary-hover-color);
+    color: #fff;
+  }
+  button:nth-child(2) {
+    @include buttons(#efefef, #e2e2e2);
+    margin-left: 10px;
+    width: 90px;
+    color: #000;
+  }
+}
+.modal_main {
+  @include display-flex(center, none, column);
+  img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-weight: 600;
+  }
+  label {
+    margin-bottom: 2px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  input {
+    width: 300px;
+    height: 48px;
+    border-radius: 16px;
+    border-color: #cdcdcd;
+    border-width: 2px;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  button {
+    @include buttons($primary-color, $primary-hover-color);
+    width: 100%;
+  }
+  .alreay_member{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
     cursor: pointer;
-
-    &:hover{
-        background-color: rgb(236, 236, 236);
-    }
-}
-.profile_tooltip{
-    width: 100px;
-    font-size: 12px;
+  }
+  .eye_icon{
+    position: absolute;
+    top: 42px;
+    right: 10px;
+    cursor: pointer;
+  }
 }

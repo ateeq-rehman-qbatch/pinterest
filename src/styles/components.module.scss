@@ -1,0 +1,11 @@
+@import "mixins";
+@import "variables";
+
+.btn_primary {
+  @include buttons($primary-color, $primary-hover-color);
+  color: #fff;
+  margin: 20px 0;
+}
+.btn_secondary {
+  @include buttons(#efefef, #e2e2e2);
+}
